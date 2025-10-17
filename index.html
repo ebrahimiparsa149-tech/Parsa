@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>نام کسب‌و‌کارتان</title>
+  <meta name="description" content="توضیح کوتاه درباره شما یا کسب‌و‌کارتان" />
+  <style>
+    :root{
+      --bg:#ffffff; --text:#111827; --accent:#0ea5a4;
+      --card:#f8fafc; --muted:#6b7280;
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:var(--text);-webkit-text-size-adjust:100%;}
+    .container{max-width:980px;margin:0 auto;padding:18px;}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .brand{display:flex;align-items:center;gap:10px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    nav{display:flex;gap:12px}
+    a{color:inherit;text-decoration:none}
+    .btn{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600;display:inline-block}
+    /* responsive nav */
+    .menu-toggle{display:none}
+    @media (max-width:720px){
+      nav{display:none}
+      .menu-toggle{display:block}
+      header{gap:8px}
+    }
+
+    /* hero */
+    .hero{display:flex;align-items:center;gap:22px;margin:20px 0;padding:18px;background:var(--card);border-radius:14px}
+    .hero-text{flex:1}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:8px 0;color:var(--muted)}
+
+    /* features */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}}
+
+    .card{background:white;padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .muted{color:var(--muted);font-size:0.95rem}
+
+    /* gallery */
+    .gallery{display:flex;gap:8px;overflow:hidden}
+    .gallery img{width:100%;height:120px;object-fit:cover;border-radius:10px;flex:1}
+
+    footer{margin:20px 0;color:var(--muted);font-size:0.95rem;text-align:center}
+
+    /* contact */
+    .contact{display:grid;gap:10px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef0;font-size:0.95rem}
+    .row{display:flex;gap:10px}
+    .row .half{flex:1}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">ک</div>
+        <div>
+          <div style="font-weight:700">نام کسب‌و‌کار</div>
+          <div class="muted" style="font-size:0.85rem">شعار کوتاه یا تخصص شما</div>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#home">خانه</a>
+        <a href="#services">خدمات</a>
+        <a href="#gallery">نمونه‌کار</a>
+        <a href="#contact" class="btn">تماس</a>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>سلام — این سایتِ شماست.</h1>
+        <p class="lead">یک معرفی کوتاه و جذاب درباره کسب‌وکارتان بنویسید. اینجا میتوانید خدماتتان را نشان دهید، مشتریان جذب کنید و تماس بگیرید.</p>
+        <div style="margin-top:10px">
+          <a href="#contact" class="btn">شروع همکاری</a>
+          <a href="#services" style="margin-left:10px" class="muted">بیشتر بدانید →</a>
+        </div>
+      </div>
+      <div style="width:150px">
+        <img src="https://via.placeholder.com/300x300?text=عکس" alt="تصویر" style="width:100%;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06)">
+      </div>
+    </section>
+
+    <section id="services">
+      <h2>خدمات ما</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>خدمت اول</h3>
+          <p class="muted">توضیح کوتاه درباره خدمت اول و چه مزیتی دارد.</p>
+        </div>
+        <div class="card">
+          <h3>خدمت دوم</h3>
+          <p class="muted">توضیح کوتاه درباره خدمت دوم و نتیجه برای مشتری.</p>
+        </div>
+        <div class="card">
+          <h3>خدمت سوم</h3>
+          <p class="muted">توضیح کوتاه درباره خدمت سوم و ویژگی متمایز.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>نمونه‌کار</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/400x300?text=نمونه+1" alt="نمونه1">
+        <img src="https://via.placeholder.com/400x300?text=نمونه+2" alt="نمونه2">
+        <img src="https://via.placeholder.com/400x300?text=نمونه+3" alt="نمونه3">
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:18px">
+      <h2>تماس با ما</h2>
+      <div class="card contact">
+        <!-- فرم ساده با mailto و لینک واتساپ -->
+        <div class="row">
+          <div class="half">
+            <input id="name" placeholder="نام شما">
+          </div>
+          <div class="half">
+            <input id="phone" placeholder="شماره / واتساپ">
+          </div>
+        </div>
+        <textarea id="message" rows="4" placeholder="پیام شما"></textarea>
+        <div style="display:flex;gap:8px">
+          <a href="#" onclick="sendMail(event)" class="btn">ارسال ایمیل</a>
+          <a id="whatsappLink" class="btn" style="background:#25D366">واتساپ</a>
+        </div>
+        <div class="muted" style="font-size:0.85rem">یا ایمیل: <a href="mailto:you@example.com">you@example.com</a></div>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> نام کسب‌و‌کار — طراحی ساده و سریع برای موبایل
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function toggleMenu(){
+      const nav = document.querySelector('nav');
+      const btn = document.querySelector('.menu-toggle');
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!open));
+      nav.style.display = open ? 'none' : 'flex';
+    }
+
+    function sendMail(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value || '---');
+      const phone = encodeURIComponent(document.getElementById('phone').value || '---');
+      const msg = encodeURIComponent(document.getElementById('message').value || '');
+      const subject = encodeURIComponent('تماس از سایت — ' + name);
+      const body = encodeURIComponent('نام: ' + name + '\\nشماره: ' + phone + '\\n\\n' + msg);
+      // تغییر آدرس ایمیل در ادامه
+      window.location.href = 'mailto:you@example.com?subject=' + subject + '&body=' + body;
+    }
+
+    // لینک واتساپ — شماره را با کد بین‌المللی جایگزین کنید (مثال: 989123456789)
+    document.getElementById('whatsappLink').href = 'https://wa.me/98XXXXXXXXXX?text='
+      + encodeURIComponent('سلام! من از سایت شما پیام می‌فرستم.');
+
+  </script>
+</body>
+</html>
